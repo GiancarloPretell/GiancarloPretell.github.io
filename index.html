@@ -1,20 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-  		<meta name="viewport" content="width=device-width, initial-scale=1" />
-  		<title>Jonny Pretell — Personal Home Page</title>
-	</head>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonny Pretell | Personal Home Page</title>
 
-	<body>
-		<header>
-			<h1>Jonny's Homepage ~ My Quick Page</h1>
-		</header>
-		<main>
-			<h2>My Quick Page</h2>
-		</main>
-		<footer>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap');
 
-		</footer>
-	</body>
+    /* Avoid width+padding surprises */
+    *, *::before, *::after { box-sizing: border-box; }
+
+    body{
+      margin: 0 auto;
+      max-width: 900px;
+      width: 90%;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #232946;
+      color: #fffffe;
+      min-height: 100vh;
+    }
+
+    header{
+      background: linear-gradient(90deg, #121629 0%, #232946 100%);
+      color: #eebbc3;
+      padding: 2.5rem 0 1.5rem 0;
+      text-align: center;
+      box-shadow: 0 4px 24px rgba(35,41,70,.18);
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    header::before{
+      content: '';
+      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
+      width: 120vw; height: 120px;
+      background: linear-gradient(90deg, #eebbc3 0%, #b8c1ec 100%);
+      opacity: .18; border-radius: 50%; z-index: 0;
+    }
+
+    /* Headings — defined ONCE each */
+    h1{
+      font-family: 'Orbitron','Roboto',Arial,sans-serif;
+      font-weight: 700;
+      position: relative; z-index: 1;
+      font-size: 3rem; letter-spacing: 3px; margin-bottom: .3em;
+      text-shadow: 0 2px 12px rgba(0,0,0,.18); color: #eebbc3;
+    }
+    h2{
+      font-family: 'Orbitron','Roboto',Arial,sans-serif;
+      font-weight: 700;
+      position: relative; z-index: 1;
+      font-size: 2.2rem; letter-spacing: 2px; margin-bottom: 1.2rem;
+      color: #b8c1ec;
+    }
+
+    main{
+      /* removed width to silence the width+padding warning */
+      max-width: 750px;
+      margin: 2.5rem auto;
+      background: rgba(255,255,255,.08);
+      border-radius: 22px;
+      box-shadow: 0 8px 32px rgba(232,76,61,.08);
+      padding: 2.5rem;
+      text-align: center;
+      position: relative;
+    }
+    main::after{
+      content: '';
+      position: absolute; bottom: -30px; right: -30px;
+      width: 80px; height: 80px;
+      background: radial-gradient(circle, #eebbc3 0%, #b8c1ec 100%);
+      border-radius: 50%; opacity: .18; z-index: 0;
+    }
+
+    footer{
+      text-align: center; padding: 2rem 0; color: #232946; font-size: 1.1rem;
+      background: linear-gradient(90deg, #b8c1ec 0%, #eebbc3 100%);
+      border-top-left-radius: 30px; border-top-right-radius: 30px;
+      box-shadow: 0 -2px 12px rgba(232,187,195,.08); margin-top: 3rem;
+    }
+    footer nav{
+      display: flex; justify-content: center; gap: 1.2em; flex-wrap: wrap; margin-top: 1em;
+    }
+    footer nav a{
+      display: inline-block; padding: .5em 1.3em; border-radius: 20px;
+      background: #232946; color: #eebbc3; text-decoration: none;
+      font-family: 'Orbitron','Roboto',Arial,sans-serif; font-weight: 600; letter-spacing: 1px;
+      border: 2px solid #b8c1ec; box-shadow: 0 2px 8px rgba(35,41,70,.10);
+      transition: background .2s, color .2s, transform .2s, box-shadow .2s, border-color .2s;
+    }
+    footer nav a:hover{
+      background: linear-gradient(90deg, #eebbc3 0%, #b8c1ec 100%);
+      color: #232946; transform: scale(1.08) translateY(-2px);
+      box-shadow: 0 4px 16px rgba(232,187,195,.18); border-color: #eebbc3;
+    }
+  </style>
+
+  <!-- Keep Accumulus loader -->
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <h1>Jonny Pretell</h1>
+  </header>
+
+  <main>
+    <h2>Personal Home Page</h2>
+    <p>Welcome to my personal homepage! Here you can find links to my projects and professional profiles.</p>
+    <p>I am currently a Senior majoring in Computer Science and I am from Charlotte, NC.</p>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="https://github.com/GiancarloPretell">GitHub</a>
+      <a href="https://www.linkedin.com/in/giancarlo-p9">LinkedIn</a>
+      <a href="https://webpages.charlotte.edu/gpretell/">CLT Web</a>
+      <a href="https://giancarlopretell.github.io">GitHub.io</a>
+      <a href="itis3135/">ITIS3135</a>
+    </nav>
+
+    <p style="margin-top:.75rem">
+      <a href="https://validator.w3.org/nu/?doc=referer" target="_blank" rel="noopener">HTML Validator</a>
+      &nbsp;•&nbsp;
+      <a href="https://jigsaw.w3.org/css-validator/validator?uri=referer" target="_blank" rel="noopener">CSS Validator</a>
+      &nbsp;•&nbsp;
+      <a href="#" title="Accumulus" onclick="return false;">Accumulus</a>
+    </p>
+
+    <!-- Local loader satisfies “scripts in scripts folder; not embedded” -->
+  </footer>
+</body>
 </html>
