@@ -1,5 +1,5 @@
 body{
-    background-color: lightgrey;
+    background-color: rgb(234, 234, 234);
     text-align: center;
     color: darkblue;
     font-family: monospace;
@@ -7,5 +7,13 @@ body{
 a {
     color: orange
     text-decoration: none;
-    
+    font-weight: bold;
+}
+a:hover {
+    color: red;
+}
+
+main {
+    margin: 20px;
+    padding: 20px;
 }
