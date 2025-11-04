@@ -11,15 +11,7 @@
 
 <body>
   <header>
-    <h1>Jonny Pretell's Jacked Platypus || ITSC3135</h1>
-    <nav>
-      <a href="./">Homepage</a> |
-      <a href="introduction.html">Introduction</a> |
-      <a href="contract.html">Contract</a> 
-    </nav>
-    <nav>
-      <a href="crappy.html">Crappy Page</a> 
-    </nav>
+   <div data-include="components/header.html"></div>
   </header>
   <p class="tagline">Building skills, chasing goals, and making things look clean.</p>  
   <main>
@@ -51,34 +43,13 @@
     </ul>
   </main>
   <footer>
-    <nav>
-    <a href="https://github.com/GiancarloPretell">GitHub</a>
-    |
-    <a href="https://www.linkedin.com/in/giancarlo-p9">LinkedIn</a>
-    |
-    <a href="https://webpages.charlotte.edu/gpretell/">CLT Web</a>
-    |
-    <a href="https://giancarlopretell.github.io">GitHub.io</a>
-    |
-    <a href="https://www.freecodecamp.org/fcc-ff53d742-d599-4a6d-852d-855f4b54688b">FreeCodeCamp</a>
-    </nav>
-    <p>Page Built by <a href="https://jackedplatypus.com">Jacked Platypus Enterprises </a>&copy;2023</p>
-
-    <a href="https://validator.w3.org/check?uri=referer" id="validation_link_html">
-    <img src="images/button_validation_html5.png" width="88" height="31" alt="Validate webpage HTML." />
-    </a>
-    <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation_link_css">
-    <img src="images/button_validation_css.png" width="88" height="31" alt="Validate webpage CSS." />
-      </a>
-    <a href="#" title="Accumulus" onclick="return false;">Accumulus</a>
-    <p>
-    <small>Page designed by <a href="JPdesigns.com/">JP Designs</a></small>
-    </p>
+   <div data-include="components/footer.html"></div>
 
   </footer>
     <script>
       document.getElementById("validation_link_html").setAttribute("href", "https://validator.w3.org/check?uri=" + location.href);
       document.getElementById("validation_link_css").setAttribute("href", "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href);
     </script>
+    <script src="scripts/HTMLInclude.min.js"></script>
 </body>
 </html>
