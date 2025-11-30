@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Overview – Jacked Platypus Events Hub</title>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="styles/default.css">
+</head>
+
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+
+  <p class="tagline">Building skills, chasing goals, and making things look clean.</p>
+
+  <main>
+    <h2>Project Overview – Jacked Platypus Events Hub</h2>
+
+    <section>
+      <h3>Project Overview</h3>
+
+      <h4>Project Name</h4>
+      <p><strong>Jacked Platypus Events Hub</strong></p>
+
+      <h4>Function and Purpose</h4>
+      <p>
+        Jacked Platypus Events Hub is a web application that promotes a local DJ and event brand.
+        The site will showcase upcoming events, past shows, media highlights, and booking information.
+        The goal is to build a professional online presence, help users discover events, and allow
+        promoters to request bookings easily.
+      </p>
+
+      <h4>Intended Users</h4>
+      <ul>
+        <li><strong>Students and young adults</strong> at UNC Charlotte looking for events.</li>
+        <li><strong>Event organizers and promoters</strong> needing booking info.</li>
+        <li><strong>Existing followers</strong> wanting updates, photos, and media.</li>
+      </ul>
+
+      <h4>Overview of Website Content</h4>
+      <ul>
+        <li>Home page with intro and featured event</li>
+        <li>About page with story and background</li>
+        <li>Events page listing shows</li>
+        <li>Media page with photos and clips</li>
+        <li>Contact / Booking page with a form</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Client Information</h3>
+      <ul>
+        <li><strong>Name:</strong> Daniel Santana</li>
+        <li><strong>Organization:</strong> DJ ARX Events</li>
+        <li><strong>Email:</strong> dsantan2@charlotte.edu</li>
+        <li><strong>Phone:</strong> [private]</li>
+      </ul>
+      <p>
+        The client manages a DJ and event brand and wants a clean, professional website
+        to display events, photos, and booking information.
+      </p>
+    </section>
+
+    <section>
+      <h3>Wireframe</h3>
+      <p>
+        The wireframe shows the default layout for the project, including the header, navigation bar,
+        main content area, and footer. It provides a visual reference before development.
+      </p>
+
+      <p><a href="images/project_wireframe.png" target="_blank">View full wireframe</a></p>
+
+      <figure>
+        <img src="images/project_wireframe.png" style="max-width:600px; width:100%; height:auto;">
+        <figcaption>Homepage wireframe created using Draw.io.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Site Map</h3>
+      <p>
+        The site map outlines the structure and main navigation of the web application.
+      </p>
+
+      <ul>
+        <li><strong>Home</strong> (index.html)</li>
+        <li><strong>About</strong></li>
+        <li><strong>Events</strong></li>
+        <li><strong>Media / Gallery</strong></li>
+        <li><strong>Contact / Booking</strong></li>
+      </ul>
+
+      <p><a href="images/project_sitemap.png" target="_blank">View full site map</a></p>
+
+      <figure>
+        <img src="images/project_sitemap.png" alt="Jacked Platypus sitemap" width="600">
+        <figcaption>Site map showing the navigation flow.</figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h3>Page Design Details</h3>
+
+      <h4>1. Home Page (index.html)</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Introduce the brand and highlight an upcoming event.</li>
+        <li><strong>Audience:</strong> All visitors.</li>
+        <li><strong>Content:</strong> Hero, intro, featured event.</li>
+        <li><strong>Data Entry:</strong> None.</li>
+        <li><strong>Links/Buttons:</strong> “View Events”, “Book Now”.</li>
+        <li><strong>Actions:</strong> Navigation to Events or Contact.</li>
+      </ul>
+
+      <h4>2. About Page</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Tell the DJ’s story.</li>
+        <li><strong>Content:</strong> Bio, background, fun facts.</li>
+        <li><strong>Interactivity:</strong> Accordion UI section.</li>
+      </ul>
+
+      <h4>3. Events Page</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Show event listings.</li>
+        <li><strong>Content:</strong> Event cards with date and location.</li>
+        <li><strong>Interactivity:</strong> Filtering and detail expanding.</li>
+        <li><strong>AJAX:</strong> Load events from JSON.</li>
+      </ul>
+
+      <h4>4. Media / Gallery Page</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Display photos and clips.</li>
+        <li><strong>Interactivity:</strong> Lightbox/zoom gallery.</li>
+      </ul>
+
+      <h4>5. Contact / Booking Page</h4>
+      <ul>
+        <li><strong>Purpose:</strong> Booking form.</li>
+        <li><strong>Fields:</strong> Name, Email, Event Type, Date, Message.</li>
+        <li><strong>Validation:</strong> Required fields + email format.</li>
+      </ul>
+    </section>
+
+    <!-- DYNAMIC FUNCTIONALITY -->
+    <section>
+      <h3>Dynamic Functionality</h3>
+
+      <h4>Planned Interactivity</h4>
+      <ul>
+        <li>jQuery UI accordion (About)</li>
+        <li>JavaScript image gallery/lightbox (Media)</li>
+        <li>Form validation (Contact)</li>
+        <li>AJAX event loading (Events)</li>
+      </ul>
+
+      <h4>Example Sources</h4>
+      <ul>
+        <li><a href="https://jqueryui.com/accordion/" target="_blank">jQuery UI Accordion</a></li>
+        <li><a href="https://jqueryui.com/dialog/" target="_blank">jQuery UI Dialog</a></li>
+        <li><a href="https://getbootstrap.com/docs/5.0/components/carousel/" target="_blank">Bootstrap Carousel</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="_blank">Fetch API</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Notes and References</h3>
+      <p>Student: Giancarlo (Jonny) Pretell<br>
+      Date: November 30, 2025</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <div data-include="components/footer.html"></div>
+  </footer>
+
+  <script>
+    document.getElementById("validation_link_html").setAttribute(
+      "href",
+      "https://validator.w3.org/check?uri=" + location.href
+    );
+    document.getElementById("validation_link_css").setAttribute(
+      "href",
+      "https://jigsaw.w3.org/css-validator/validator?uri=" + location.href
+    );
+  </script>
+  <script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>
