@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", function () {
 
-  const form = document.getElementById("intro-form");
-  const resultDiv = document.getElementById("result");
-  const clearBtn = document.getElementById("clearBtn");
-  const addCourseBtn = document.getElementById("addCourseBtn");
-  const coursesContainer = document.getElementById("courses-container");
+  var form = document.getElementById("intro-form");
+  var resultDiv = document.getElementById("result");
+  var clearBtn = document.getElementById("clearBtn");
+  var addCourseBtn = document.getElementById("addCourseBtn");
+  var coursesContainer = document.getElementById("courses-container");
 
   // Default starting courses
-  const starterCourses = [
+  var starterCourses = [
     {
       dept: "ITCS",
       num: "3112",
@@ -40,136 +40,145 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   ];
 
-  // Add a course block
-  function addCourse(course = {}) {
-    const block = document.createElement("div");
+  function addCourse(course) {
+    if (!course) course = {};
+
+    var block = document.createElement("div");
     block.classList.add("course-block");
 
-    block.innerHTML = `
-      <label>Department:
-        <input type="text" class="courseDept" value="${course.dept || ""}" required>
-      </label>
+    block.innerHTML =
+      '<label>Department:' +
+      '<input type="text" class="courseDept" value="' + (course.dept || '') + '" required></label>' +
 
-      <label>Number:
-        <input type="text" class="courseNum" value="${course.num || ""}" required>
-      </label>
+      '<label>Number:' +
+      '<input type="text" class="courseNum" value="' + (course.num || '') + '" required></label>' +
 
-      <label>Course Name:
-        <input type="text" class="courseName" value="${course.name || ""}" required>
-      </label>
+      '<label>Course Name:' +
+      '<input type="text" class="courseName" value="' + (course.name || '') + '" required></label>' +
 
-      <label>Reason:
-        <input type="text" class="courseReason" value="${course.reason || ""}" required>
-      </label>
+      '<label>Reason:' +
+      '<input type="text" class="courseReason" value="' + (course.reason || '') + '" required></label>' +
 
-      <button type="button" class="deleteCourse">Delete</button>
-      <hr>
-    `;
+      '<button type="button" class="deleteCourse">Delete</button>' +
+      '<hr>';
 
-    block.querySelector(".deleteCourse").addEventListener("click", () => {
+    block.querySelector(".deleteCourse").addEventListener("click", function () {
       block.remove();
     });
 
     coursesContainer.appendChild(block);
   }
 
-  // Initialize default courses
-  starterCourses.forEach(c => addCourse(c));
+  // Load initial courses
+  for (var i = 0; i < starterCourses.length; i++) {
+    addCourse(starterCourses[i]);
+  }
 
-  // Add new course button
-  addCourseBtn.addEventListener("click", () => addCourse());
-
-  // Clear button
-  clearBtn.addEventListener("click", () => {
-    form.querySelectorAll("input, textarea").forEach(el => {
-      if (el.type !== "file") el.value = "";
-    });
+  // Add course button
+  addCourseBtn.addEventListener("click", function () {
+    addCourse();
   });
 
-  // FORM SUBMIT
-  form.addEventListener("submit", e => {
+  // Clear button
+  clearBtn.addEventListener("click", function () {
+    var fields = form.querySelectorAll("input, textarea");
+    for (var i = 0; i < fields.length; i++) {
+      if (fields[i].type !== "file") {
+        fields[i].value = "";
+      }
+    }
+  });
+
+
+  form.addEventListener("submit", function (e) {
     e.preventDefault();
     buildResult();
   });
 
+
   function buildResult() {
 
-    // Collect form values
-    const firstName = firstName.value;
-    const middleName = middleName.value;
-    const nickname = nickname.value;
-    const lastName = lastName.value;
+    // Collect text fields safely
+    var firstName = document.getElementById("firstName").value;
+    var middleName = document.getElementById("middleName").value;
+    var nickname = document.getElementById("nickname").value;
+    var lastName = document.getElementById("lastName").value;
 
-    const ackStatement = ackStatement.value;
-    const ackDate = ackDate.value;
+    var ackStatement = document.getElementById("ackStatement").value;
+    var ackDate = document.getElementById("ackDate").value;
 
-    const mascotAdj = mascotAdj.value;
-    const mascotAnimal = mascotAnimal.value;
-    const divider = divider.value;
+    var mascotAdj = document.getElementById("mascotAdj").value;
+    var mascotAnimal = document.getElementById("mascotAnimal").value;
+    var divider = document.getElementById("divider").value;
 
-    const picUrlField = document.getElementById("pictureUrl").value;
-    const fileInput = document.getElementById("pictureFile").files[0];
-    let finalImage = picUrlField;
+    var pictureUrl = document.getElementById("pictureUrl").value;
+    var pictureFile = document.getElementById("pictureFile").files[0];
 
-    if (fileInput) {
-      finalImage = URL.createObjectURL(fileInput);
+    var finalImage = pictureUrl;
+    if (pictureFile) {
+      finalImage = URL.createObjectURL(pictureFile);
     }
 
-    const caption = pictureCaption.value;
+    var caption = document.getElementById("pictureCaption").value;
 
-    const personalStatement = personalStatement.value;
-    const professional = professionalBackground.value;
-    const academic = academicBackground.value;
-    const subject = subjectBackground.value;
-    const platform = platform.value;
-    const funny = funnyThing.value;
-    const share = shareThing.value;
-    const grad = grad.value;
-    const from = from.value;
+    var personalStatement = document.getElementById("personalStatement").value;
+    var professional = document.getElementById("professionalBackground").value;
+    var academic = document.getElementById("academicBackground").value;
+    var subject = document.getElementById("subjectBackground").value;
+    var platform = document.getElementById("platform").value;
 
-    // Course values
-    const courseBlocks = document.querySelectorAll(".course-block");
-    let courseHTML = "";
+    var funny = document.getElementById("funnyThing").value;
+    var share = document.getElementById("shareThing").value;
+    var grad = document.getElementById("grad").value;
+    var fromText = document.getElementById("from").value;
 
-    courseBlocks.forEach(b => {
-      const dept = b.querySelector(".courseDept").value;
-      const num = b.querySelector(".courseNum").value;
-      const name = b.querySelector(".courseName").value;
-      const reason = b.querySelector(".courseReason").value;
+    // COURSES
+    var courseBlocks = document.querySelectorAll(".course-block");
+    var courseHTML = "";
 
-      courseHTML += `
-        <li><strong>${dept} ${num} - ${name}:</strong> ${reason}</li>
-      `;
-    });
+    for (var i = 0; i < courseBlocks.length; i++) {
+      var block = courseBlocks[i];
+      var dept = block.querySelector(".courseDept").value;
+      var num = block.querySelector(".courseNum").value;
+      var name = block.querySelector(".courseName").value;
+      var reason = block.querySelector(".courseReason").value;
 
-    // BUILD FINAL INTRO PAGE (MUST MATCH intro.html EXACTLY)
-    resultDiv.innerHTML = `
-      <h2>Introduction</h2>
-      <figure>
-        <img src="${finalImage}" alt="User Image" width="200" height="200">
-        <figcaption><em>${caption}</em></figcaption>
-      </figure>
+      courseHTML +=
+        "<li><strong>" + dept + " " + num + " - " + name + ":</strong> " + reason + "</li>";
+    }
 
-      <ul>
-        <li><strong>Personal Background:</strong> ${personalStatement}</li>
-        <li><strong>Professional Background:</strong> ${professional}</li>
-        <li><strong>Academic Background:</strong> ${academic}</li>
-        <li><strong>Background in this Subject:</strong> ${subject}</li>
-        <li><strong>Primary Computer Platform:</strong> ${platform}</li>
-        <li><strong>Courses I'm Taking & Why:</strong></li>
-        <ul>${courseHTML}</ul>
-        <li><strong>Funny/Interesting Item to Remember me by:</strong> ${funny}</li>
-        <li><strong>I'd also like to share:</strong> ${share}</li>
-        <li>${grad}</li>
-        <li>${from}</li>
-      </ul>
+    // BUILD FINAL OUTPUT PAGE
+    resultDiv.innerHTML =
+      '<h2>Introduction</h2>' +
 
-      <button id="resetAll">Reset Everything</button>
-    `;
+      '<figure>' +
+      '<img src="' + finalImage + '" width="200" height="200">' +
+      '<figcaption><em>' + caption + '</em></figcaption>' +
+      '</figure>' +
 
-    document.getElementById("intro-form").style.display = "none";
+      '<ul>' +
+        '<li><strong>Personal Background:</strong> ' + personalStatement + '</li>' +
+        '<li><strong>Professional Background:</strong> ' + professional + '</li>' +
+        '<li><strong>Academic Background:</strong> ' + academic + '</li>' +
+        '<li><strong>Background in this Subject:</strong> ' + subject + '</li>' +
+        '<li><strong>Primary Computer Platform:</strong> ' + platform + '</li>' +
 
-    document.getElementById("resetAll").addEventListener("click", () => {
+        '<li><strong>Courses I\'m Taking & Why:</strong></li>' +
+        '<ul>' + courseHTML + '</ul>' +
+
+        '<li><strong>Funny/Interesting Item to Remember me by:</strong> ' + funny + '</li>' +
+        '<li><strong>I\'d also like to share:</strong> ' + share + '</li>' +
+        '<li>' + grad + '</li>' +
+        '<li>' + fromText + '</li>' +
+      '</ul>' +
+
+      '<button id="resetAll">Reset Everything</button>';
+
+    // Hide form
+    form.style.display = "none";
+
+    // Reset everything
+    document.getElementById("resetAll").addEventListener("click", function () {
       resultDiv.innerHTML = "";
       form.style.display = "block";
     });
