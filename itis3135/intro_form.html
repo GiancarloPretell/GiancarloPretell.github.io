@@ -4,162 +4,194 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Introduction Form</title>
+
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" type="text/css" href="styles/default.css">
+
+  <!-- Highlight.js -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+  <style>
+    form label {
+      display: block;
+      margin-top: 12px;
+      font-weight: bold;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 6px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    h4 { margin-top: 20px; }
+  </style>
 </head>
 
 <body>
-  <header>
-    <div data-include="components/header.html"></div>
-  </header>
+<header>
+  <div data-include="components/header.html"></div>
+</header>
 
-  <p class="tagline">Building skills, chasing goals, and making things look clean.</p>
+<p class="tagline">Building skills, chasing goals, and making things look clean.</p>
 
-  <main>
-    <h2>Introduction Form</h2>
-    <h3>Please submit the form below.</h3>
+<main>
+  <h2>Introduction Form</h2>
+  <h3>Please submit the form below.</h3>
 
-<form id="intro-form">
+  <form id="intro-form">
 
-  <h4>Name Information</h4>
+    <h4>Name Information</h4>
 
-  <label>First Name*:
-    <input type="text" id="firstName" required value="Giancarlo">
-  </label>
+    <label>First Name*:
+      <input type="text" id="firstName" required value="Giancarlo">
+    </label>
 
-  <label>Middle Name / Initial:
-    <input type="text" id="middleName" placeholder="Optional">
-  </label>
+    <label>Middle Name / Initial:
+      <input type="text" id="middleName" placeholder="Optional">
+    </label>
 
-  <label>Nickname:
-    <input type="text" id="nickname" value="Jonny">
-  </label>
+    <label>Nickname:
+      <input type="text" id="nickname" value="Jonny">
+    </label>
 
-  <label>Last Name*:
-    <input type="text" id="lastName" required value="Pretell">
-  </label>
+    <label>Last Name*:
+      <input type="text" id="lastName" required value="Pretell">
+    </label>
 
+    <h4>Acknowledgment</h4>
 
-  <h4>Acknowledgment</h4>
+    <label>Acknowledgment Statement*:
+      <input type="text" id="ackStatement" required value="I acknowledge that this is my work.">
+    </label>
 
-  <label>Acknowledgment Statement*:
-    <input type="text" id="ackStatement" required value="I acknowledge that this is my work.">
-  </label>
+    <label>Acknowledgement Date*:
+      <input type="date" id="ackDate" required value="2024-10-26">
+    </label>
 
-  <label>Acknowledgement Date*:
-    <input type="date" id="ackDate" required value="2024-10-26">
-  </label>
+    <h4>Mascot Information</h4>
 
-  <h4>Mascot Information</h4>
-  <label>Mascot Adjective*:
-    <input type="text" id="mascotAdj" required value="Jacked">
-  </label>
-  <label>Mascot Animal*:
-    <input type="text" id="mascotAnimal" required value="Platypus">
-  </label>
-  <label>Divider Symbol*:
-    <input type="text" id="divider" required value="~">
-  </label>
+    <label>Mascot Adjective*:
+      <input type="text" id="mascotAdj" required value="Jacked">
+    </label>
 
-  <h4>Picture</h4>
-  <label>Picture URL*:
-    <input type="url" id="pictureUrl" required value="images/jackedplatypus.png">
-  </label>
-  <label>Upload New Picture:
-    <input type="file" id="pictureFile" accept="image/*">
-  </label>
-  <label>Picture Caption*:
-    <input type="text" id="pictureCaption" required value="Jacked Platypus Logo">
-  </label>
+    <label>Mascot Animal*:
+      <input type="text" id="mascotAnimal" required value="Platypus">
+    </label>
 
-  <h4>Personal Background</h4>
-  <label>
-    <textarea id="personalStatement" required>Hi everyone, my name is Giancarlo Pretell...</textarea>
-  </label>
+    <label>Divider Symbol*:
+      <input type="text" id="divider" required value="~">
+    </label>
 
-  <h4>Professional Background</h4>
-  <label>
-    <textarea id="professionalBackground" required>I have had several jobs...</textarea>
-  </label>
+    <h4>Picture</h4>
 
-  <h4>Academic Background</h4>
-  <label>
-    <textarea id="academicBackground" required>I am currently a computer science major...</textarea>
-  </label>
+    <label>Picture URL*:
+      <input type="url" id="pictureUrl" required value="https://giancarlopretell.github.io/itis3135/images/jackedplatypus.png">
+    </label>
 
-  <h4>Background in This Subject</h4>
-  <label>
-    <textarea id="subjectBackground" required>I have taken a few programming classes.</textarea>
-  </label>
+    <label>Upload New Picture:
+      <input type="file" id="pictureFile" accept="image/*">
+    </label>
 
-  <h4>Primary Computer Platform</h4>
-  <label>
-    <input type="text" id="platform" required value="Macbook">
-  </label>
+    <label>Picture Caption*:
+      <input type="text" id="pictureCaption" required value="Jacked Platypus Logo">
+    </label>
 
-  <h4>Funny Thing</h4>
-  <label>
-    <textarea id="funnyThing">I own eight cats at home.</textarea>
-  </label>
+    <h4>Personal Background</h4>
+    <label>
+<textarea id="personalStatement" required>
+Hi everyone, my name is Giancarlo Pretell, but I go by Jonny. I am a computer science major that was born and raised in Charlotte, NC. I am of Puerto Rican and Peruvian descent. A couple things I like to do are watch movies, hangout with friends, and listen to music.
+</textarea>
+    </label>
 
-  <h4>Something I'd Like to Share</h4>
-  <label>
-    <textarea id="shareThing">I am excited to take this course!</textarea>
-  </label>
+    <h4>Professional Background</h4>
+    <label>
+<textarea id="professionalBackground" required>
+I have had several jobs in the restaurant industry including cooking, serving, and managing. I even worked as a pizza chef at Sovi! I recently had a Bank of America internship for technical audit this past summer which I am excited to continue after graduation.
+</textarea>
+    </label>
 
-  <h4>Graduation</h4>
-  <label>
-    <input type="text" id="grad" value="Graduating Spring 2026">
-  </label>
+    <h4>Academic Background</h4>
+    <label>
+<textarea id="academicBackground" required>
+I am currently a computer science major with a concentration in software engineering. I plan to graduate this coming May 2026.
+</textarea>
+    </label>
 
-  <h4>From</h4>
-  <label>
-    <input type="text" id="from" value="From NC">
-  </label>
+    <h4>Background in This Subject</h4>
+    <label>
+<textarea id="subjectBackground" required>
+I have taken a few programming classes.
+</textarea>
+    </label>
 
+    <h4>Primary Computer Platform</h4>
+    <label>
+      <input type="text" id="platform" required value="Macbook">
+    </label>
 
-  <h4>Courses (Dynamic)</h4>
-  <div id="courses-container"></div>
-  <button type="button" id="addCourseBtn">Add Course</button>
+    <h4>Funny Thing</h4>
+    <label>
+<textarea id="funnyThing">I own eight cats at home.</textarea>
+    </label>
 
-  <h4>Links</h4>
-  <label>Link 1:
-    <input type="url" id="link1" value="https://www.linkedin.com">
-  </label>
+    <h4>Something I'd Like to Share</h4>
+    <label>
+<textarea id="shareThing">I am excited to take this course!</textarea>
+    </label>
 
-  <label>Link 2:
-    <input type="url" id="link2" value="https://github.com">
-  </label>
+    <h4>Graduation</h4>
+    <label>
+      <input type="text" id="grad" value="Graduating Spring 2026">
+    </label>
 
-  <label>Link 3:
-    <input type="url" id="link3">
-  </label>
+    <h4>From</h4>
+    <label>
+      <input type="text" id="from" value="From NC">
+    </label>
 
-  <label>Link 4:
-    <input type="url" id="link4">
-  </label>
+    <h4>Courses (Dynamic)</h4>
+    <div id="courses-container"></div>
+    <button type="button" id="addCourseBtn">Add Course</button>
 
-  <label>Link 5:
-    <input type="url" id="link5">
-  </label>
+    <h4>Links</h4>
 
-  <button type="submit">Submit</button>
-  <button type="reset">Reset</button>
-  <button type="button" id="clearBtn">Clear</button>
+    <label>Link 1:
+      <input type="url" id="link1" value="https://www.linkedin.com">
+    </label>
+    <label>Link 2:
+      <input type="url" id="link2" value="https://github.com">
+    </label>
+    <label>Link 3:
+      <input type="url" id="link3">
+    </label>
+    <label>Link 4:
+      <input type="url" id="link4">
+    </label>
+    <label>Link 5:
+      <input type="url" id="link5">
+    </label>
 
-</form>
+    <button type="submit">Submit</button>
+    <button type="reset">Reset</button>
+    <button type="button" id="clearBtn">Clear</button>
+    <button type="button" id="generateJSON">Generate JSON</button>
 
+  </form>
 
-    <div id="result"></div>
+  <div id="result"></div>
 
-  </main>
+</main>
 
-  <footer>
-    <div data-include="components/footer.html"></div>
-  </footer>
+<footer>
+  <div data-include="components/footer.html"></div>
+</footer>
 
-  <script src="scripts/HTMLInclude.min.js"></script>
-  <script src="scripts/introduction.js" defer></script>
+<script src="scripts/HTMLInclude.min.js"></script>
+<script src="scripts/introduction.js" defer></script>
+<script src="scripts/generate_json.js" defer></script>
+<script>hljs.highlightAll();</script>
 
 </body>
 </html>
