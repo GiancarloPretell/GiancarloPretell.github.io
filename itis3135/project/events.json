@@ -1,0 +1,30 @@
+{
+  "upcoming": [
+    {
+      "title": "Glow Night at South End",
+      "date": "December 12, 2025",
+      "location": "South End Lounge, Charlotte, NC",
+      "description": "Neon theme with EDM, hip-hop, and remix sets all night."
+    },
+    {
+      "title": "UNCC Semester Kickoff",
+      "date": "January 10, 2026",
+      "location": "Campus Greek Village",
+      "description": "Outdoor kickoff party with open-format music and crowd interaction."
+    }
+  ],
+  "past": [
+    {
+      "title": "Halloween House Party",
+      "date": "October 31, 2025",
+      "location": "Charlotte, NC",
+      "description": "Costume contest, spooky remixes, and packed dance floor."
+    },
+    {
+      "title": "Summer Rooftop Session",
+      "date": "August 5, 2025",
+      "location": "Uptown Rooftop",
+      "description": "Sunset set, house music, and late-night hip-hop."
+    }
+  ]
+}
