@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacked Platypus Events Hub – Events</title>
-    <link rel="stylesheet" href="styles/project.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jacked Platypus Events Hub – Events</title>
+  <link rel="stylesheet" href="styles/project.css">
 </head>
 <body>
-
-<header>
+  <header>
     <div class="site-title">Jacked Platypus Events Hub</div>
     <nav>
       <ul>
@@ -19,25 +18,67 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
-</header>
+  </header>
 
-<main>
-    <section class="section">
-        <h1>Upcoming Events</h1>
-        <div id="upcoming-events" class="card-list"></div>
-    </section>
+  <main>
 
     <section class="section">
-        <h2>Past Events</h2>
-        <div id="past-events" class="card-list"></div>
-    </section>
-</main>
+      <h1>Event Listings</h1>
 
-<footer>
+      <div class="event-filters">
+        <button id="show-upcoming">Show Upcoming</button>
+        <button id="show-past">Show Past</button>
+        <button id="show-all">Show All</button>
+      </div>
+    </section>
+
+    <section class="section events-section upcoming-events">
+      <h2>Upcoming Events</h2>
+      <div class="card-list">
+        <article class="card">
+          <h3>Glow Night at South End</h3>
+          <p><strong>Date:</strong> December 12, 2025</p>
+          <p><strong>Location:</strong> South End Lounge</p>
+          <p>Neon theme with EDM, hip-hop, and remix sets.</p>
+        </article>
+
+        <article class="card">
+          <h3>UNCC Semester Kickoff</h3>
+          <p><strong>Date:</strong> January 10, 2026</p>
+          <p><strong>Location:</strong> Campus Greek Village</p>
+          <p>Outdoor kickoff party with crowd interaction.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section events-section past-events">
+      <h2>Past Events</h2>
+      <div class="card-list">
+        <article class="card">
+          <h3>Halloween House Party</h3>
+          <p><strong>Date:</strong> October 31, 2025</p>
+          <p><strong>Highlights:</strong> Costume contest & spooky mixes.</p>
+        </article>
+
+        <article class="card">
+          <h3>Summer Rooftop Session</h3>
+          <p><strong>Date:</strong> August 5, 2025</p>
+          <p><strong>Highlights:</strong> Sunset house music + late-night hip-hop.</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
     <p>&copy; 2025 Jacked Platypus Events Hub</p>
-</footer>
+    <p>
+      <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a> |
+      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
+    </p>
+  </footer>
 
-<script src="../scripts/events.js"></script>
+  <script src="scripts/events.js"></script>
 
 </body>
 </html>

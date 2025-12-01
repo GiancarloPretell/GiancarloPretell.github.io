@@ -293,3 +293,19 @@ footer a {
     position: static;
   }
 }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.lightbox-content img {
+  width: 80%;
+  max-width: 900px;
+  border-radius: 10px;
+}
