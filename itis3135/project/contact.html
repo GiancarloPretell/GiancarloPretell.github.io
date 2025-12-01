@@ -6,65 +6,38 @@
   <title>Jacked Platypus Events Hub – Contact</title>
   <link rel="stylesheet" href="styles/project.css">
 </head>
+
 <body>
   <header>
-    <div class="site-title">Jacked Platypus Events Hub</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="contact.html" class="active">Contact</a></li>
-      </ul>
-    </nav>
+    <div data-include="components/header.html"></div>
   </header>
 
   <main>
     <section class="section">
       <h1>Contact & Booking</h1>
-      <p>Use the form below to inquire about bookings, collaborations, or event details.</p>
 
-      <form class="contact-form">
-        <label>
-          Name
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          Email
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          Event Type
-          <input type="text" name="eventType" placeholder="House party, bar night, formal, etc.">
-        </label>
-
-        <label>
-          Event Date
-          <input type="date" name="eventDate">
-        </label>
-
-        <label>
-          Message
-          <textarea name="message" rows="5" required></textarea>
-        </label>
+      <form id="contact-form" class="contact-form">
+        <label>Name<input id="name" type="text" required></label>
+        <label>Email<input id="email" type="email" required></label>
+        <label>Event Type<input type="text"></label>
+        <label>Event Date<input type="date"></label>
+        <label>Message<textarea id="message" rows="5" required></textarea></label>
 
         <div class="form-buttons">
           <button type="submit">Send Request</button>
           <button type="reset">Reset</button>
         </div>
       </form>
+
+      <p id="form-message"></p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jacked Platypus Events Hub</p>
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a> |
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
-    </p>
+    <div data-include="components/footer.html"></div>
   </footer>
+
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/contact.js"></script>
 </body>
 </html>

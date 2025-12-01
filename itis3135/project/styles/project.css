@@ -309,3 +309,16 @@ footer a {
   max-width: 900px;
   border-radius: 10px;
 }
+
+.form-message {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.form-message.error {
+  color: #ff8a8a;
+}
+
+.form-message.success {
+  color: #9ae6b4;
+}

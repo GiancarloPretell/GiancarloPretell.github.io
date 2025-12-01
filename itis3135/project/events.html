@@ -6,18 +6,10 @@
   <title>Jacked Platypus Events Hub – Events</title>
   <link rel="stylesheet" href="styles/project.css">
 </head>
+
 <body>
   <header>
-    <div class="site-title">Jacked Platypus Events Hub</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html" class="active">Events</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div data-include="components/header.html"></div>
   </header>
 
   <main>
@@ -32,38 +24,34 @@
       </div>
     </section>
 
-    <section class="section events-section upcoming-events">
+    <section class="section upcoming-events">
       <h2>Upcoming Events</h2>
       <div class="card-list">
         <article class="card">
           <h3>Glow Night at South End</h3>
-          <p><strong>Date:</strong> December 12, 2025</p>
-          <p><strong>Location:</strong> South End Lounge</p>
-          <p>Neon theme with EDM, hip-hop, and remix sets.</p>
+          <p>Date: December 12, 2025</p>
+          <p>Neon theme and remixes.</p>
         </article>
 
         <article class="card">
           <h3>UNCC Semester Kickoff</h3>
-          <p><strong>Date:</strong> January 10, 2026</p>
-          <p><strong>Location:</strong> Campus Greek Village</p>
-          <p>Outdoor kickoff party with crowd interaction.</p>
+          <p>Date: January 10, 2026</p>
+          <p>Outdoor kickoff party.</p>
         </article>
       </div>
     </section>
 
-    <section class="section events-section past-events">
+    <section class="section past-events">
       <h2>Past Events</h2>
       <div class="card-list">
         <article class="card">
           <h3>Halloween House Party</h3>
-          <p><strong>Date:</strong> October 31, 2025</p>
-          <p><strong>Highlights:</strong> Costume contest & spooky mixes.</p>
+          <p>Date: October 31, 2025</p>
         </article>
 
         <article class="card">
           <h3>Summer Rooftop Session</h3>
-          <p><strong>Date:</strong> August 5, 2025</p>
-          <p><strong>Highlights:</strong> Sunset house music + late-night hip-hop.</p>
+          <p>Date: August 5, 2025</p>
         </article>
       </div>
     </section>
@@ -71,14 +59,11 @@
   </main>
 
   <footer>
-    <p>&copy; 2025 Jacked Platypus Events Hub</p>
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a> |
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
-    </p>
+    <div data-include="components/footer.html"></div>
   </footer>
 
   <script src="scripts/events.js"></script>
+  <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
 </html>

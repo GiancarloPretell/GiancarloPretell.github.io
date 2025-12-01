@@ -4,80 +4,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacked Platypus Events Hub – About</title>
+
   <link rel="stylesheet" href="styles/project.css">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 </head>
+
 <body>
   <header>
-    <div class="site-title">Jacked Platypus Events Hub</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="media.html">Media</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div data-include="components/header.html"></div>
   </header>
 
-<main>
-  <h1>About Jacked Platypus</h1>
+  <main>
+    <h1>About Jacked Platypus</h1>
 
-  <div id="about-accordion">
+    <div id="about-accordion">
 
-    <h3>Who is Jacked Platypus?</h3>
-    <div>
-      <div class="grid-2">
-        <div>
-          <p>Jacked Platypus is a Charlotte-based DJ and event brand focused on bringing high-energy sets to UNC Charlotte and the surrounding area. The goal is simple: make every night feel like the main event.</p>
-          <p>From fraternity parties and bar nights to themed events and private functions, the brand focuses on crowd energy, clean transitions, and reading the room instead of just pressing play on a playlist.</p>
-        </div>
-
-        <div>
-          <img src="images/dj_profile.png" alt="DJ behind the decks">
+      <h3>Who is Jacked Platypus?</h3>
+      <div>
+        <div class="grid-2">
+          <div>
+            <p>Jacked Platypus is a Charlotte-based DJ and event brand focused on bringing high-energy sets to UNC Charlotte...</p>
+          </div>
+          <div>
+            <img src="images/dj_profile.png" alt="DJ behind the decks">
+          </div>
         </div>
       </div>
+
+      <h3>What You Can Expect</h3>
+      <div>
+        <ul class="checklist">
+          <li>Customized playlists matching your vibe</li>
+          <li>Professional communication</li>
+          <li>Experience with student events</li>
+        </ul>
+      </div>
+
+      <h3>Fun Facts</h3>
+      <div>
+        <p>• Specializes in house, EDM, hip-hop, and Latin mixes.</p>
+        <p>• Known for remixes and mashups.</p>
+      </div>
+
     </div>
-
-    <h3>What You Can Expect</h3>
-    <div>
-      <ul class="checklist">
-        <li>Customized playlists matching the vibe of your event</li>
-        <li>Smooth transitions and live mixing</li>
-        <li>Professional communication and planning</li>
-        <li>Experience with college crowds and student events</li>
-      </ul>
-    </div>
-
-    <h3>Fun Facts</h3>
-    <div>
-      <p>• Specializes in house, EDM, hip-hop, and Latin mixes.</p>
-      <p>• Started performing at small house parties before expanding to full venue events.</p>
-      <p>• Known for unexpectedly good remixes and mashups.</p>
-    </div>
-
-  </div>
-</main>
-
+  </main>
 
   <footer>
-    <p>&copy; 2025 Jacked Platypus Events Hub</p>
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a> |
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
-    </p>
+    <div data-include="components/footer.html"></div>
   </footer>
-  <script>
-  $(function () {
-    $("#about-accordion").accordion({
-      heightStyle: "content",
-      collapsible: true
-    });
-  });
-  </script>
 
+  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="scripts/about.js"></script>
 </body>
 </html>

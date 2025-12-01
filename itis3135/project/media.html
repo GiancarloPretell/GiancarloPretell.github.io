@@ -1,56 +1,48 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jacked Platypus Events Hub – Media</title>
+
   <link rel="stylesheet" href="styles/project.css">
 </head>
+
 <body>
   <header>
-    <div class="site-title">Jacked Platypus Events Hub</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="events.html">Events</a></li>
-        <li><a href="media.html" class="active">Media</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
+    <div data-include="components/header.html"></div>
   </header>
 
   <main>
     <section class="section">
-      <h1>Media & Gallery</h1>
-      <p>Photos and moments from past Jacked Platypus events. Click any photo to enlarge.</p>
+      <h1>Media</h1>
 
-      <div class="gallery">
-        <figure>
-          <img src="images/crowd.png" alt="Crowd dancing at a party" class="lightbox-img">
-          <figcaption>Crowd going off during a late-night set.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/lights.png" alt="Club lights and DJ setup" class="lightbox-img">
-          <figcaption>Light setup and decks before doors open.</figcaption>
-        </figure>
-        <figure>
-          <img src="images/flyer.png" alt="Event flyer design" class="lightbox-img">
-          <figcaption>Sample flyer design for a themed house party.</figcaption>
-        </figure>
-      </div>
+<div class="gallery">
+  <figure>
+    <img src="images/crowd.png" alt="Crowd dancing at a party">
+    <figcaption>Crowd going off during a late-night set.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/lights.png" alt="Club lights and DJ setup">
+    <figcaption>Light setup and decks before doors open.</figcaption>
+  </figure>
+
+  <figure>
+    <img src="images/flyer.png" alt="Event flyer design">
+    <figcaption>Example flyer for themed event.</figcaption>
+  </figure>
+</div>
+
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Jacked Platypus Events Hub</p>
-    <p>
-      <a href="https://validator.w3.org/check?uri=referer">HTML Validation</a> |
-      <a href="https://jigsaw.w3.org/css-validator/check/referer">CSS Validation</a>
-    </p>
+    <div data-include="components/footer.html"></div>
   </footer>
 
   <script src="scripts/lightbox.js"></script>
+  <script src="scripts/HTMLInclude.min.js"></script>
 
 </body>
 </html>
