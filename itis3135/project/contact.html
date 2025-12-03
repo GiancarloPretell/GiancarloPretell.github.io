@@ -6,7 +6,6 @@
   <title>Jacked Platypus Events Hub – Contact</title>
   <link rel="stylesheet" href="styles/project.css">
 </head>
-
 <body>
   <header>
     <div data-include="components/header.html"></div>
@@ -15,13 +14,33 @@
   <main>
     <section class="section">
       <h1>Contact & Booking</h1>
+      <p>Use the form below to inquire about bookings, collaborations, or event details.</p>
 
       <form id="contact-form" class="contact-form">
-        <label>Name<input id="name" type="text" required></label>
-        <label>Email<input id="email" type="email" required></label>
-        <label>Event Type<input type="text"></label>
-        <label>Event Date<input type="date"></label>
-        <label>Message<textarea id="message" rows="5" required></textarea></label>
+        <label>
+          Name
+          <input id="name" type="text" name="name" required>
+        </label>
+
+        <label>
+          Email
+          <input id="email" type="email" name="email" required>
+        </label>
+
+        <label>
+          Event Type
+          <input type="text" name="eventType" placeholder="House party, bar night, formal, etc.">
+        </label>
+
+        <label>
+          Event Date
+          <input type="date" name="eventDate">
+        </label>
+
+        <label>
+          Message
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </label>
 
         <div class="form-buttons">
           <button type="submit">Send Request</button>
@@ -29,7 +48,8 @@
         </div>
       </form>
 
-      <p id="form-message"></p>
+      <p id="form-message" class="form-message"></p>
+
     </section>
   </main>
 
@@ -37,7 +57,7 @@
     <div data-include="components/footer.html"></div>
   </footer>
 
-  <script src="scripts/HTMLInclude.min.js"></script>
+  <script src="../scripts/HTMLInclude.min.js"></script>
   <script src="scripts/contact.js"></script>
 </body>
 </html>
