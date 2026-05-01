@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project Overview | Yale Website Redesign</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500;700&display=swap');
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Roboto', Arial, sans-serif;
+      background: #232946;
+      color: #fffffe;
+    }
+
+    .container {
+      max-width: 1000px;
+      width: 90%;
+      margin: 0 auto;
+      padding: 30px 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 35px 25px;
+      background: linear-gradient(135deg, #121629, #232946);
+      border-radius: 26px;
+      border: 1px solid rgba(184, 193, 236, 0.25);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+      margin-bottom: 30px;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    }
+
+    h1 {
+      color: #eebbc3;
+      font-size: 2.4rem;
+      margin: 0 0 10px;
+    }
+
+    header p {
+      color: #b8c1ec;
+      font-size: 1.1rem;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 30px;
+    }
+
+    nav a,
+    .button {
+      text-decoration: none;
+      color: #232946;
+      background: linear-gradient(90deg, #eebbc3, #b8c1ec);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      display: inline-block;
+      transition: 0.2s ease;
+    }
+
+    nav a:hover,
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(238, 187, 195, 0.25);
+    }
+
+    .section {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(184, 193, 236, 0.2);
+      border-radius: 22px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.16);
+    }
+
+    h2 {
+      color: #eebbc3;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #b8c1ec;
+    }
+
+    p, li {
+      color: #d8ddff;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      background: #fffffe;
+      color: #232946;
+      padding: 20px;
+      border-radius: 18px;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.16);
+    }
+
+    .card h3 {
+      color: #232946;
+      margin-top: 0;
+    }
+
+    .card p {
+      color: #4a4f6a;
+    }
+
+    .image-box {
+      text-align: center;
+      margin-top: 18px;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      border-radius: 18px;
+      border: 1px solid rgba(184, 193, 236, 0.3);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.22);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 35px;
+      padding: 25px;
+      background: linear-gradient(90deg, #b8c1ec, #eebbc3);
+      color: #232946;
+      border-radius: 24px;
+      font-weight: 700;
+    }
+
+    footer a {
+      color: #232946;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <h1>Project Overview</h1>
+      <p>Yale School of Art Website Redesign</p>
+    </header>
+
+    <nav>
+      <a href="../../index.html">Home</a>
+      <a href="../index.html">ITIS3135</a>
+      <a href="case-study.html">Case Study</a>
+      <a href="../website_evaluations.html">Evaluations</a>
+    </nav>
+
+    <main>
+      <section class="section">
+        <h2>Project Summary</h2>
+        <p>
+          This project focused on redesigning the Yale School of Art website. The original
+          site had a chaotic layout, inconsistent visual style, and confusing navigation.
+          Our goal was to make the website feel cleaner, easier to use, and more professional
+          while still keeping an artistic and creative identity.
+        </p>
+
+        <a class="button" href="case-study.html">View Full Case Study</a>
+      </section>
+
+      <section class="section">
+        <h2>Problem</h2>
+        <p>
+          The original Yale School of Art website was difficult to navigate because the
+          page structure, colors, spacing, and typography felt inconsistent. Important
+          information was hard to find quickly, which created a poor user experience for
+          students, applicants, and visitors.
+        </p>
+      </section>
+
+      <section class="section">
+        <h2>Target Audience</h2>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Prospective Students</h3>
+            <p>
+              Users looking for admissions, program details, and school information.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Current Students</h3>
+            <p>
+              Students trying to find updates, resources, events, and department information.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>General Visitors</h3>
+            <p>
+              People exploring the school, its work, and its creative identity.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Main Goals</h2>
+        <ul>
+          <li>Improve navigation and make important pages easier to find</li>
+          <li>Create a cleaner and more organized layout</li>
+          <li>Improve readability with better spacing and typography</li>
+          <li>Keep the website creative without making it feel messy</li>
+          <li>Make the design feel more modern and usable</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Design Direction</h2>
+        <p>
+          The redesign focused on using clearer sections, stronger visual hierarchy,
+          cleaner spacing, and a more intentional layout. Instead of overwhelming users
+          with too much visual noise, the new design organizes content in a way that is
+          easier to scan and understand.
+        </p>
+
+        <div class="image-box">
+          <img src="./images/YaleOGweb.png" alt="Original Yale School of Art website screenshot">
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Final Outcome</h2>
+        <p>
+          The final redesign makes the Yale School of Art website easier to use while
+          still keeping a creative feel. Users can understand the purpose of the site
+          faster, move through pages more easily, and find important information without
+          feeling overwhelmed.
+        </p>
+
+        <div class="image-box">
+          <img src="./images/image.png" alt="Final redesigned Yale website prototype">
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Jonny Pretell | <a href="case-study.html">Case Study</a></p>
+    </footer>
+
+  </div>
+</body>
+</html>

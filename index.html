@@ -3,133 +3,280 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Jonny Pretell ~ Student at Charlotte | Welcome to my student site!</title>
+  <title>Jonny Pretell | Student Portfolio</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@400;500;700&display=swap');
 
-    /* Avoid width+padding surprises */
     *, *::before, *::after { box-sizing: border-box; }
 
-    body{
-      margin: 0 auto;
-      max-width: 900px;
-      width: 90%;
+    body {
+      margin: 0;
       font-family: 'Roboto', Arial, sans-serif;
       background: #232946;
       color: #fffffe;
       min-height: 100vh;
     }
 
-    header{
-      background: linear-gradient(90deg, #121629 0%, #232946 100%);
+    .page {
+      max-width: 1050px;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    header {
+      margin-top: 25px;
+      padding: 28px;
+      border-radius: 28px;
+      background: linear-gradient(135deg, #121629, #232946);
+      box-shadow: 0 10px 35px rgba(0, 0, 0, .25);
+      text-align: center;
+      border: 1px solid rgba(184, 193, 236, .25);
+    }
+
+    h1, h2, h3 {
+      font-family: 'Orbitron', 'Roboto', Arial, sans-serif;
+    }
+
+    h1 {
       color: #eebbc3;
-      padding: 2.5rem 0 1.5rem 0;
-      text-align: center;
-      box-shadow: 0 4px 24px rgba(35,41,70,.18);
-      border-bottom-left-radius: 40px;
-      border-bottom-right-radius: 40px;
-      position: relative;
-      overflow: hidden;
-    }
-    header::before{
-      content: '';
-      position: absolute; top: -60px; left: 50%; transform: translateX(-50%);
-      width: 120vw; height: 120px;
-      background: linear-gradient(90deg, #eebbc3 0%, #b8c1ec 100%);
-      opacity: .18; border-radius: 50%; z-index: 0;
+      font-size: 2.7rem;
+      margin: 0 0 10px;
+      letter-spacing: 2px;
     }
 
-    /* Headings — defined ONCE each */
-    h1{
-      font-family: 'Orbitron','Roboto',Arial,sans-serif;
-      font-weight: 700;
-      position: relative; z-index: 1;
-      font-size: 3rem; letter-spacing: 3px; margin-bottom: .3em;
-      text-shadow: 0 2px 12px rgba(0,0,0,.18); color: #eebbc3;
-    }
-    h2{
-      font-family: 'Orbitron','Roboto',Arial,sans-serif;
-      font-weight: 700;
-      position: relative; z-index: 1;
-      font-size: 2.2rem; letter-spacing: 2px; margin-bottom: 1.2rem;
+    .tagline {
       color: #b8c1ec;
+      font-size: 1.1rem;
+      margin: 0;
     }
 
-    main{
-      /* removed width to silence the width+padding warning */
-      max-width: 750px;
-      margin: 2.5rem auto;
-      background: rgba(255,255,255,.08);
-      border-radius: 22px;
-      box-shadow: 0 8px 32px rgba(232,76,61,.08);
-      padding: 2.5rem;
+    .top-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 25px;
+    }
+
+    .top-nav a,
+    .button {
+      text-decoration: none;
+      color: #232946;
+      background: linear-gradient(90deg, #eebbc3, #b8c1ec);
+      padding: 12px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: .2s ease;
+      display: inline-block;
+    }
+
+    .top-nav a:hover,
+    .button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(238, 187, 195, .25);
+    }
+
+    main {
+      margin: 35px 0;
+    }
+
+    .hero {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(184, 193, 236, .25);
+      border-radius: 28px;
+      padding: 45px;
       text-align: center;
-      position: relative;
-    }
-    main::after{
-      content: '';
-      position: absolute; bottom: -30px; right: -30px;
-      width: 80px; height: 80px;
-      background: radial-gradient(circle, #eebbc3 0%, #b8c1ec 100%);
-      border-radius: 50%; opacity: .18; z-index: 0;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, .18);
     }
 
-    footer{
-      text-align: center; padding: 2rem 0; color: #232946; font-size: 1.1rem;
-      background: linear-gradient(90deg, #b8c1ec 0%, #eebbc3 100%);
-      border-top-left-radius: 30px; border-top-right-radius: 30px;
-      box-shadow: 0 -2px 12px rgba(232,187,195,.08); margin-top: 3rem;
+    .hero h2 {
+      color: #fffffe;
+      font-size: 2.2rem;
+      margin-top: 0;
     }
-    footer nav{
-      display: flex; justify-content: center; gap: 1.2em; flex-wrap: wrap; margin-top: 1em;
+
+    .hero p {
+      max-width: 750px;
+      margin: 0 auto 20px;
+      color: #d8ddff;
+      line-height: 1.7;
+      font-size: 1.08rem;
     }
-    footer nav a{
-      display: inline-block; padding: .5em 1.3em; border-radius: 20px;
-      background: #232946; color: #eebbc3; text-decoration: none;
-      font-family: 'Orbitron','Roboto',Arial,sans-serif; font-weight: 600; letter-spacing: 1px;
-      border: 2px solid #b8c1ec; box-shadow: 0 2px 8px rgba(35,41,70,.10);
-      transition: background .2s, color .2s, transform .2s, box-shadow .2s, border-color .2s;
+
+    .section-title {
+      color: #eebbc3;
+      margin-top: 45px;
+      font-size: 1.9rem;
+      text-align: center;
     }
-    footer nav a:hover{
-      background: linear-gradient(90deg, #eebbc3 0%, #b8c1ec 100%);
-      color: #232946; transform: scale(1.08) translateY(-2px);
-      box-shadow: 0 4px 16px rgba(232,187,195,.18); border-color: #eebbc3;
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+      margin-top: 22px;
+    }
+
+    .card {
+      background: #fffffe;
+      color: #232946;
+      border-radius: 22px;
+      padding: 26px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+      transition: .2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: #232946;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      line-height: 1.6;
+      color: #4a4f6a;
+    }
+
+    .card a {
+      color: #232946;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 2px solid #eebbc3;
+    }
+
+    .card a:hover {
+      color: #7b4b5a;
+    }
+
+    footer {
+      text-align: center;
+      padding: 28px;
+      margin: 45px 0 25px;
+      border-radius: 28px;
+      background: linear-gradient(90deg, #b8c1ec, #eebbc3);
+      color: #232946;
+      font-weight: 500;
+    }
+
+    footer nav {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+    }
+
+    footer nav a,
+    footer p a {
+      color: #232946;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    footer nav a:hover,
+    footer p a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      h1 { font-size: 2rem; }
+      .hero { padding: 28px; }
+      .hero h2 { font-size: 1.7rem; }
     }
   </style>
 
-  <!-- Keep Accumulus loader -->
   <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <header>
-    <h1>Jonny Pretell ~ Student at Charlotte</h1>
-  </header>
+  <div class="page">
 
-  <main>
-    <h2>Welcome to my student site!</h2>
-    <p>Welcome to my personal homepage! Here you can find links to my projects and professional profiles.</p>
-    <p>I am currently a Senior majoring in Computer Science and I am from Charlotte, NC.</p>
-  </main>
+    <header>
+      <h1>Jonny Pretell</h1>
+      <p class="tagline">Computer Science Student at UNC Charlotte</p>
 
-  <footer>
-    <nav>
-      <a href="https://github.com/GiancarloPretell">GitHub</a>
-      <a href="https://www.linkedin.com/in/giancarlo-p9">LinkedIn</a>
-      <a href="https://giancarlopretell.github.io">GitHub.io</a>
-      <a href="itis3135/">ITIS3135</a>
-      
-    </nav>
+      <nav class="top-nav">
+        <a href="index.html">Home</a>
+        <a href="itis3135/">ITIS3135</a>
+        <a href="itis3135/project/project_overview.html">Project Overview</a>
+        <a href="itis3135/project/case-study.html">Case Study</a>
+        <a href="itis3135/review1.html">Review 1</a>
+        <a href="itis3135/review2.html">Review 2</a>
+      </nav>
+    </header>
 
-    <p style="margin-top:.75rem">
-      <a href="https://validator.w3.org/nu/?doc=referer" target="_blank" rel="noopener">HTML Validator</a>
-      &nbsp;•&nbsp;
-      <a href="https://jigsaw.w3.org/css-validator/validator?uri=referer" target="_blank" rel="noopener">CSS Validator</a>
-      &nbsp;•&nbsp;
-      <a href="#" title="Accumulus" onclick="return false;">Accumulus</a>
-    </p>
+    <main>
+      <section class="hero">
+        <h2>Welcome to my student portfolio</h2>
+        <p>
+          This site includes my ITIS 3135 coursework, project pages, website evaluations,
+          and a case study that explains my redesign process from the original problem
+          to the final product.
+        </p>
+        <p>
+          I am a senior majoring in Computer Science from Charlotte, NC, with interests
+          in technology, audit, design, and building useful digital systems.
+        </p>
 
-  </footer>
+        <a class="button" href="itis3135/project/case-study.html">View My Case Study</a>
+      </section>
+
+      <h2 class="section-title">Featured Work</h2>
+
+      <section class="projects">
+        <div class="card">
+          <h3>Website Redesign Case Study</h3>
+          <p>
+            A full walkthrough of the project problem, critique, design decisions,
+            testing feedback, and final redesigned website.
+          </p>
+          <a href="itis3135/project/case-study.html">Read Case Study →</a>
+        </div>
+
+        <div class="card">
+          <h3>Project Overview</h3>
+          <p>
+            This page explains the purpose of my semester project, the intended users,
+            and the main features included in the site.
+          </p>
+          <a href="itis3135/project/project_overview.html">View Project →</a>
+        </div>
+
+        <div class="card">
+          <h3>Website Evaluations</h3>
+          <p>
+            These reviews analyze websites based on usability, visual design,
+            navigation, contrast, and overall user experience.
+          </p>
+          <a href="itis3135/website_evaluations.html">View Evaluations →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <nav>
+        <a href="https://github.com/GiancarloPretell">GitHub</a>
+        <a href="https://www.linkedin.com/in/giancarlo-p9">LinkedIn</a>
+        <a href="https://giancarlopretell.github.io">GitHub.io</a>
+        <a href="itis3135/">ITIS3135</a>
+      </nav>
+
+      <p>
+        <a href="https://validator.w3.org/nu/?doc=referer" target="_blank" rel="noopener">HTML Validator</a>
+        &nbsp;•&nbsp;
+        <a href="https://jigsaw.w3.org/css-validator/validator?uri=referer" target="_blank" rel="noopener">CSS Validator</a>
+        &nbsp;•&nbsp;
+        <a href="#" title="Accumulus" onclick="return false;">Accumulus</a>
+      </p>
+
+      <p>&copy; 2026 Jonny Pretell</p>
+    </footer>
+
+  </div>
 </body>
 </html>
